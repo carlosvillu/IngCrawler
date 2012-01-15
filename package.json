@@ -1,0 +1,24 @@
+{
+  "author": "Carlos Villuendas <carlosvillu@gmail.com>",
+  "name": "ingcrawler",
+  "description": "Crawler for ing XLS movement",
+  "version": "0.0.1",
+  "repository": {
+    "url": ""
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "cake test"
+  },
+  "engines": {
+    "node": "~0.4.12"
+  },
+  "dependencies": {
+      "jquery": "*"
+  },
+  "devDependencies": {
+      "coffee-script": "*"
+    , "mocha": "0.10.x"
+    , "should": "0.5.x"
+  }
+}
