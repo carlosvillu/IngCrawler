@@ -56,6 +56,12 @@ describe 'Parser', ->
       movement.should.have.property 'balance' for movement in movements
       done()
   
+  it 'each object should has the key category', (done) ->
+    parser pathToFixture, (err, movements) ->
+      done(err) if err
+      movement.should.have.property 'category' for movement in movements
+      done()
+
   it 'the data_operation field should be a Date type', (done) ->
     parser pathToFixture, (err, movements) ->
       done(err) if err
@@ -91,12 +97,14 @@ describe 'Parser', ->
         description: "Ingreso N�mina"
         amount: 3675.7
         balance: 3424.63
+        category: 'undefined'
       @expectedThree =
         date_operation: new Date(2011, 11, 27)
         date_valor: new Date(2011, 11, 27)
         description: "Pago PELUQUERIA"
         amount: -9
         balance: 3390.26
+        category: 'undefined'
 
     it 'should be 4 operations', (done) ->
       parser pathToFixture, (err, movements) ->

@@ -14,6 +14,7 @@ getOperationFromHTML = (tr) ->
   description: $(tr).find('td').eq(2).html()
   amount: parseFloat(amountValue.replace(',', '.'), 10) #replace decimal comma for point
   balance: parseFloat(balanceValue.replace(',', '.'), 10) #replace decimal comma for point
+  category: 'undefined'
 
 module.exports = (path, cb) ->
   exists path, (exists) ->
